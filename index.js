@@ -61,3 +61,4 @@ var Store = (function () {
 
 module.exports.Action = Action;
 module.exports.Store = Store;
+module.exports.Singleton = Singleton;
