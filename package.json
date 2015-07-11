@@ -1,0 +1,28 @@
+{
+  "name": "staticflux",
+  "version": "0.0.0",
+  "description": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/richardanaya/staticflux.git"
+  },
+  "keywords": [
+    "staticflux",
+    "React",
+    "Flux",
+    "reactive extensions"
+  ],
+  "dependencies": {
+    "rx": "2.5.3"
+  },
+  "author": "Richard Anaya <richard.anaya@gmail.com> (http://www.richardanaya.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardanaya/staticflux/issues"
+  },
+  "homepage": "https://github.com/richardanaya/staticflux"
+}
