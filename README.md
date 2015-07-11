@@ -22,6 +22,7 @@ npm install staticflux --save-dev
 ```
 
 **Example**
+
 Let's say we need to model a unidirectional dataflow of chat messages being typed in by a user from a view. We need an action to be able to notify all Stores involved that a new message is being added from the view:
 
 ```javascript
