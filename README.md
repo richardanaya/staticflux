@@ -1,7 +1,7 @@
 # StaticFlux
 
 staticflux.js is a very minimalistic unidirectional data flow framework. More specifically it is a wrapper around Rx to provide 
-for the metaphors of Store/Action pattern of flux. 
+for the metaphors of Store/Action pattern of flux. If you are new to flux, check out: http://fluxxor.com/what-is-flux.html
 
 **Why another flux library?**
 
