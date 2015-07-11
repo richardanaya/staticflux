@@ -1,7 +1,13 @@
 var Rx = require('rx');
 
-function Singleton(){
-
+function Singleton(o) {
+    o.__defineGetter__('instance', function() {
+        if(!o._instance){
+            o._instance = new o();
+        }
+        return o._instance;
+    });
+    
 }
 
 class Action {
