@@ -31,8 +31,8 @@ Let's say we need to model a unidirectional dataflow of chat messages being type
 
 ```javascript
 //chatactions.js
-let {Action} = require("staticflux");
 
+let {Action} = require("staticflux");
 exports.sendMessage = Action.create();
 ```
 
@@ -40,13 +40,14 @@ We need a store to hold the state:
 
 ```javascript
 //messagestore.js
+
 let ChatActions = require('./chatactions');
 let {Store,Singleton} = require("staticflux");
 
 @Singleton //this puts a lazily-loaded instance property on this class
 class MessageStore extends Store {
     constructor() {
-        super([]);
+        super(["This is my initial state"]);
         ChatActions.sendMessage.subscribe(::this.handleMessage)
     }
 
@@ -67,9 +68,9 @@ let ChatActions = require('./chatactions');
 let MessageStore = require('./messagestore');
 
 ...
-//When we subscribe we will receive the current state
 MessageStore.instance.subscribe( (message) => {
     //re-render messages to dom
+    //Important Note: When we subscribe we will receive the current state ["This my initial state"]
 })
 ...
 //elsewhere in our applcation we will be listening for dom interactions in order to send out a new chat message
