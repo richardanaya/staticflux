@@ -1,7 +1,7 @@
 {
   "name": "staticflux",
   "version": "0.0.0",
-  "description": "0.0.1",
+  "description": "0.0.2",
   "main": "index.js",
   "scripts": {
     "test": "test"
