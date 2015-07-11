@@ -44,7 +44,7 @@ We need a store to hold the state:
 let ChatActions = require('./chatactions');
 let {Store,Singleton} = require("staticflux");
 
-@Singleton //this puts a lazily-loaded instance property on this class
+@Singleton
 class MessageStore extends Store {
     constructor() {
         super(["This is my initial state"]);
