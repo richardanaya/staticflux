@@ -39,3 +39,4 @@ class Store {
 
 module.exports.Action = Action;
 module.exports.Store = Store;
+module.exports.Singleton = Singleton;
