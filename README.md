@@ -46,19 +46,14 @@ let {Store,Singleton} = require("staticflux");
 @Singleton //this puts a lazily-loaded instance property on this class
 class MessageStore extends Store {
     constructor() {
-        //Our starting state of our store is an empty array
         super([]);
-        
-        //Let's listen for actions from sendMessage action
         ChatActions.sendMessage.subscribe(::this.handleMessage)
     }
 
     handleMessage(message) {
-        //Add a new message to the current value
-        var newMessages = this.value.push(message);
-        
-        //Set it as the observers new value and notify all listeners
-        this.setValue(newMessages);
+        var newState = this.state;
+        newState.push(message);
+        this.updateState(newState);
     }
 };
 
