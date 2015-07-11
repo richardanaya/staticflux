@@ -43,7 +43,7 @@ We need a store to hold the state:
 let ChatActions = require('./chatactions');
 let {Store,Singleton} = require("staticflux");
 
-@Singleton
+@Singleton //this puts a lazily-loaded instance property on this class
 class MessageStore extends Store {
     constructor() {
         //Our starting state of our store is an empty array
@@ -68,6 +68,8 @@ module.exports = MessageStore;
 In the View of our code somewhere we simply use it
 
 ```javascript
+let ChatActions = require('./chatactions');
+let MessageStore = require('./messagestore');
 
 ...
 //When we subscribe we will receive the current state
