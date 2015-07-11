@@ -69,8 +69,10 @@ let MessageStore = require('./messagestore');
 
 ...
 MessageStore.instance.subscribe( (message) => {
-    //re-render messages to dom
-    //Important Note: When we subscribe we will receive the current state ["This my initial state"]
+    //Render messages to dom
+    
+    //Important Note: When we subscribe we will receive 
+    //the current state ["This my initial state"]
 })
 ...
 //Trigger an action of a new message created
