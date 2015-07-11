@@ -73,7 +73,7 @@ MessageStore.instance.subscribe( (message) => {
     //Important Note: When we subscribe we will receive the current state ["This my initial state"]
 })
 ...
-//elsewhere in our applcation we will be listening for dom interactions in order to send out a new chat message
+//Trigger an action of a new message created
 ChatAction.sendMessage(newMessage);
 ...
 
