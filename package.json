@@ -1,6 +1,6 @@
 {
   "name": "staticflux",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple Store/Action library based on RxJS",
   "main": "index.js",
   "scripts": {
