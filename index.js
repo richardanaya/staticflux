@@ -1,35 +1,56 @@
+'use strict';
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
 var Rx = require('rx');
 
-function Singleton(){
+function Singleton() {}
 
-}
-
-class Action {
-    static create(){
-        var subject = new Rx.Subject();
-        var fn = function(value) {
-            subject.onNext(value)
-        }
-        Object.setPrototypeOf(fn,subject);
-        return fn;
+var Action = (function () {
+    function Action() {
+        _classCallCheck(this, Action);
     }
-}
 
-class Store {
-    constructor(value){
+    _createClass(Action, null, [{
+        key: 'create',
+        value: function create() {
+            var subject = new Rx.Subject();
+            var fn = function fn(value) {
+                subject.onNext(value);
+            };
+            Object.setPrototypeOf(fn, subject);
+            return fn;
+        }
+    }]);
+
+    return Action;
+})();
+
+var Store = (function () {
+    function Store(value) {
+        _classCallCheck(this, Store);
+
         this.subject = new Rx.ReplaySubject(1);
         this.setValue(value);
     }
 
-    setValue(value){
-        this.value = value;
-        this.subject.onNext(value);
-    }
+    _createClass(Store, [{
+        key: 'setValue',
+        value: function setValue(value) {
+            this.value = value;
+            this.subject.onNext(value);
+        }
+    }, {
+        key: 'subscribe',
+        value: function subscribe(handler) {
+            this.subject.subscribe(handler);
+        }
+    }]);
 
-    subscribe(handler){
-        this.subject.subscribe(handler);
-    }
-}
+    return Store;
+})();
 
 module.exports.Action = Action;
 module.exports.Store = Store;
