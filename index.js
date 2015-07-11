@@ -36,18 +36,18 @@ var Action = (function () {
 })();
 
 var Store = (function () {
-    function Store(value) {
+    function Store(state) {
         _classCallCheck(this, Store);
 
         this.subject = new Rx.ReplaySubject(1);
-        this.setValue(value);
+        this.updateState(state);
     }
 
     _createClass(Store, [{
-        key: 'setValue',
-        value: function setValue(value) {
-            this.value = value;
-            this.subject.onNext(value);
+        key: 'updateState',
+        value: function updateState(state) {
+            this.state = state;
+            this.subject.onNext(state);
         }
     }, {
         key: 'subscribe',
