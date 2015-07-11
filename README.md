@@ -46,7 +46,7 @@ class MessageStore extends Store {
         super([]);
         
         //Let's listen for actions from sendMessage action
-        ChatActions.sendMessage.subscribe(this.handleMessage.bind(this))
+        ChatActions.sendMessage.subscribe(::this.handleMessage)
     }
 
     handleMessage(message) {
