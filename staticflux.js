@@ -22,14 +22,14 @@ class Action {
 }
 
 class Store {
-    constructor(value){
+    constructor(state){
         this.subject = new Rx.ReplaySubject(1);
-        this.setValue(value);
+        this.updateState(state);
     }
 
-    setValue(value){
-        this.value = value;
-        this.subject.onNext(value);
+    updateState(state){
+        this.state = state;
+        this.subject.onNext(state);
     }
 
     subscribe(handler){
