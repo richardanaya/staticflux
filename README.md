@@ -19,9 +19,9 @@ Because I love both flux and Rx. Rx is powerful and fulfills the essense of unid
 
 # The Basics
 
-**What is an Store?**
+**What is a Store?**
 
-A Store holds a singular state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
+A Store is an observable that holds a singular state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
 
 **What is an Action?**
 
