@@ -11,7 +11,7 @@ Unidirectional data architure is a pattern for creating web applications that is
 **What is Rx and why should I care?**
 Rx is a powerful paradigm for performing operations on data streams that are extremely common. It is an attempt to identify extremely common operations that are done all the time and provide a library that can accomplish them easily. (Example: how do you filter down a giant nested dictionary structure into just the data you care about, how do you program autocomplete and all its various states and considerations in a concise manner)
 
-You might imagine Rx as the Observer patter on steroids, but it's augmentations can allow for extremely powerful and concise expressions.
+You might imagine Rx as the Observer patter on steroids, but it's augmentations can allow for extremely powerful and concise expressions. If you are new to Rx, check out https://github.com/Reactive-Extensions/RxJS 
 
 **Why another flux library?**
 
