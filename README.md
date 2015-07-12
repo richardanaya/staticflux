@@ -6,10 +6,10 @@ More specifically it is a wrapper around Rx to provide for the metaphors of Stor
 
 **What is unidirectional data architecture and why should I care?**
 
-Unidirectional data architure is a pattern for creating web applications that is simpler and more performant. History many applications have used the concept of databinging and viewmodels as a primary pattern for application constructure. This has commonly been called in recent times flux, if you are new to flux, check out: http://fluxxor.com/what-is-flux.html
+Unidirectional data architure is a pattern for creating web applications that is simpler and can be more performant with some view technologies (particularly React). This has commonly been called in recent times as flux, if you are new to flux, check out: http://fluxxor.com/what-is-flux.html
 
 **What is Rx and why should I care?**
-Rx is a powerful paradigm for performing operations on data streams that are extremely common. It is an attempt to identify extremely common operations that are done all the time and provide a library that can accomplish them easily.
+Rx is a powerful paradigm for performing operations on data streams that are extremely common. It is an attempt to identify extremely common operations that are done all the time and provide a library that can accomplish them easily. (Example: how do you filter down a giant nested dictionary structure into just the data you care about, how do you program autocomplete and all its various states and considerations in a concise manner)
 
 You might imagine Rx as the Observer patter on steroids, but it's augmentations can allow for extremely powerful and concise expressions.
 
@@ -21,11 +21,11 @@ Because I love both flux and Rx. Rx is powerful and fulfills the essense of unid
 
 **What is an Store?**
 
-An Store is state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
+A Store holds a singular state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
 
 **What is an Action?**
 
-An Action is an observable that streams commands as values to stores or other interested parties to listen to. (Examples: deleting a record, removing a friend from your friends list)
+An Action is an observable that streams commands as values to stores or other interested parties that listen. (Examples: deleting a record, removing a friend from your friends list)
 
 **What makes this all different from just an Observer, Pub/Sub, Notification pattern?**
 
