@@ -1,23 +1,37 @@
 # StaticFlux
 
-staticflux.js is a very minimalistic unidirectional data flow framework. More specifically it is a wrapper around Rx to provide 
-for the metaphors of Store/Action pattern of flux. If you are new to flux, check out: http://fluxxor.com/what-is-flux.html
+staticflux.js is a microlibrary for creating unidirectional data flow architecture. 
+
+More specifically it is a wrapper around Rx to provide for the metaphors of Store/Action pattern of flux.
+
+**What is unidirectional data architecture and why should I care?**
+
+Unidirectional data architure is a pattern for creatig web applications that is simpler and more performant. History many applications have used the concept of databinging and viewmodels as a primary pattern for application constructure. This has commonly been called in recent times flux, if you are new to flux, check out: http://fluxxor.com/what-is-flux.html
+
+**What is Rx and why should I care?**
+Rx is a powerful paradigm for performing operations on data streams that are extremely common. It is an attempt to identify extremely common operations that are done all the time and provide a library that can accomplish them easily.
+
+You might imagine Rx as the Observer patter on steroids, but it's augmentations can allow for extremely powerful and concise expressions.
 
 **Why another flux library?**
 
-Because Rx is powerful and fulfills the essense of unidirectional data flow of flux (and much more), but isn't very explicit for it as a library on its own. I also saw no good libraries out there that really were as minimalistic as it needed to be.
+Because I love both flux and Rx. Rx is powerful and fulfills the essense of unidirectional data flow of flux (and much more), but isn't very explicit for it as a library on its own. I also saw no good libraries out there that really were as minimalistic as it needed to be.
+
+# The Basics
 
 **What is an Store?**
 
-An Store is state that is streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
+An Store is state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
 
 **What is an Action?**
 
-An Action is an observable subject that processes a stream of values. These values are provided from various points in the application and listened to by Stores to update their state appropriately. (Example: text messages a user is submitting from a text box)
+An Action is an observable that streams commands as values to stores or other interested parties to listen to. (Examples: deleting a record, removing a friend from your friends list)
 
 **What makes this all different from just an Observer, Pub/Sub, Notification pattern?**
 
-A very good question. The subtlety of a store is that it has a singular state. When you subscribe to a store of the first thing you will receive through the handler is the current state. Whenever a change occurs in which the state must change (via an action or otherwise), the store will notify its observers of its new state.
+A very good question. The subtlety of a store is that it has a singular state. When you subscribe to a store of the first thing you will receive through the handler is the current state. Whenever a change occurs in which the state must change (via an action or otherwise), the store will notify its listeners of its new state. This state will then trickle down through the application heirarchy. Actions at any point in the view heirarchy will always be sent to the stores.
+
+# Getting Started
 
 **Installing**
 
