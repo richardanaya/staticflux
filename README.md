@@ -2,6 +2,8 @@
 
 staticflux.js is a microlibrary for creating unidirectional data flow architecture. 
 
+http://www.thesoftwaresimpleton.com/images/lasttry.png
+
 More specifically it is a wrapper around Rx to provide for the metaphors of Store/Action pattern of flux.
 
 **What is unidirectional data architecture and why should I care?**
