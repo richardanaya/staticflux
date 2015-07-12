@@ -19,6 +19,10 @@ Because I love both flux and Rx. Rx is powerful and fulfills the essense of unid
 
 # The Basics
 
+**What is an Observable?**
+
+An observable is an object that can handle the publication and notification of messages to listeners. The implementation of the Observer pattern.
+
 **What is a Store?**
 
 A Store is an observable that holds a singular state that has its updates streamed to listeners within an application. (Examples: a list of records on the screen, a map of friends and their status, etc.)
