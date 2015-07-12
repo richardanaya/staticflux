@@ -6,7 +6,7 @@ More specifically it is a wrapper around Rx to provide for the metaphors of Stor
 
 **What is unidirectional data architecture and why should I care?**
 
-Unidirectional data architure is a pattern for creatig web applications that is simpler and more performant. History many applications have used the concept of databinging and viewmodels as a primary pattern for application constructure. This has commonly been called in recent times flux, if you are new to flux, check out: http://fluxxor.com/what-is-flux.html
+Unidirectional data architure is a pattern for creating web applications that is simpler and more performant. History many applications have used the concept of databinging and viewmodels as a primary pattern for application constructure. This has commonly been called in recent times flux, if you are new to flux, check out: http://fluxxor.com/what-is-flux.html
 
 **What is Rx and why should I care?**
 Rx is a powerful paradigm for performing operations on data streams that are extremely common. It is an attempt to identify extremely common operations that are done all the time and provide a library that can accomplish them easily.
