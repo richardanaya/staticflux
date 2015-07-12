@@ -72,7 +72,7 @@ class MessageStore extends Store {
     }
 
     handleMessage(message) {
-        var newState = this.state;
+        let newState = this.state;
         newState.push(message);
         this.updateState(newState);
     }
